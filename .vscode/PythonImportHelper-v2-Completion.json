@@ -1,5 +1,62 @@
 [
     {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "sqlalchemy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
         "label": "create_engine",
         "importPath": "sqlalchemy",
         "description": "sqlalchemy",
@@ -40,11 +97,27 @@
         "documentation": {}
     },
     {
-        "label": "sessionmaker",
-        "importPath": "sqlalchemy.orm",
-        "description": "sqlalchemy.orm",
+        "label": "Annotated",
+        "importPath": "typing",
+        "description": "typing",
         "isExtraImport": true,
-        "detail": "sqlalchemy.orm",
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Field",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
         "documentation": {}
     },
     {
@@ -56,35 +129,11 @@
         "documentation": {}
     },
     {
-        "label": "declarative_base",
-        "importPath": "sqlalchemy.ext.declarative",
-        "description": "sqlalchemy.ext.declarative",
+        "label": "sessionmaker",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
         "isExtraImport": true,
-        "detail": "sqlalchemy.ext.declarative",
-        "documentation": {}
-    },
-    {
-        "label": "Annotated",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "FastAPI",
-        "importPath": "fastapi",
-        "description": "fastapi",
-        "isExtraImport": true,
-        "detail": "fastapi",
-        "documentation": {}
-    },
-    {
-        "label": "Depends",
-        "importPath": "fastapi",
-        "description": "fastapi",
-        "isExtraImport": true,
-        "detail": "fastapi",
+        "detail": "sqlalchemy.orm",
         "documentation": {}
     },
     {
@@ -105,7 +154,7 @@
         "documentation": {}
     },
     {
-        "label": "engine",
+        "label": "SessionLocal",
         "importPath": "database",
         "description": "database",
         "isExtraImport": true,
@@ -113,7 +162,7 @@
         "documentation": {}
     },
     {
-        "label": "SessionLocal",
+        "label": "engine",
         "importPath": "database",
         "description": "database",
         "isExtraImport": true,
@@ -126,6 +175,83 @@
         "description": "database",
         "isExtraImport": true,
         "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "importPath": "starlette",
+        "description": "starlette",
+        "isExtraImport": true,
+        "detail": "starlette",
+        "documentation": {}
+    },
+    {
+        "label": "declarative_base",
+        "importPath": "sqlalchemy.ext.declarative",
+        "description": "sqlalchemy.ext.declarative",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.ext.declarative",
+        "documentation": {}
+    },
+    {
+        "label": "auth",
+        "importPath": "routers",
+        "description": "routers",
+        "isExtraImport": true,
+        "detail": "routers",
+        "documentation": {}
+    },
+    {
+        "label": "todos",
+        "importPath": "routers",
+        "description": "routers",
+        "isExtraImport": true,
+        "detail": "routers",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "routers.auth",
+        "description": "routers.auth",
+        "peekOfCode": "router = APIRouter()\n@router.get(\"/auth/\")\nasync def get_user():\n    return {\"user\": \"authenticated\"}",
+        "detail": "routers.auth",
+        "documentation": {}
+    },
+    {
+        "label": "TodoRequest",
+        "kind": 6,
+        "importPath": "routers.todos",
+        "description": "routers.todos",
+        "peekOfCode": "class TodoRequest(BaseModel):\n    title: str = Field(min_length=3)\n    description: str = Field(min_length=3, max_length=100)\n    priority: int = Field(gt=0, lt=6)\n    complete: bool\n@router.get(\"/\", status_code=status.HTTP_200_OK)\nasync def read_all(db: db_dependency):\n    return db.query(Todos).all()\n@router.get(\"/todo/{todo_id}\", status_code=status.HTTP_200_OK)\nasync def read_todo(db: db_dependency, todo_id: int = Path(gt=0)):",
+        "detail": "routers.todos",
+        "documentation": {}
+    },
+    {
+        "label": "get_db",
+        "kind": 2,
+        "importPath": "routers.todos",
+        "description": "routers.todos",
+        "peekOfCode": "def get_db():\n    db = SessionLocal()\n    try:\n        yield db\n    finally:\n        db.close()\ndb_dependency = Annotated[Session, Depends(get_db)]\nclass TodoRequest(BaseModel):\n    title: str = Field(min_length=3)\n    description: str = Field(min_length=3, max_length=100)",
+        "detail": "routers.todos",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "routers.todos",
+        "description": "routers.todos",
+        "peekOfCode": "router = APIRouter()\ndef get_db():\n    db = SessionLocal()\n    try:\n        yield db\n    finally:\n        db.close()\ndb_dependency = Annotated[Session, Depends(get_db)]\nclass TodoRequest(BaseModel):\n    title: str = Field(min_length=3)",
+        "detail": "routers.todos",
+        "documentation": {}
+    },
+    {
+        "label": "db_dependency",
+        "kind": 5,
+        "importPath": "routers.todos",
+        "description": "routers.todos",
+        "peekOfCode": "db_dependency = Annotated[Session, Depends(get_db)]\nclass TodoRequest(BaseModel):\n    title: str = Field(min_length=3)\n    description: str = Field(min_length=3, max_length=100)\n    priority: int = Field(gt=0, lt=6)\n    complete: bool\n@router.get(\"/\", status_code=status.HTTP_200_OK)\nasync def read_all(db: db_dependency):\n    return db.query(Todos).all()\n@router.get(\"/todo/{todo_id}\", status_code=status.HTTP_200_OK)",
+        "detail": "routers.todos",
         "documentation": {}
     },
     {
@@ -165,29 +291,11 @@
         "documentation": {}
     },
     {
-        "label": "get_db",
-        "kind": 2,
-        "importPath": "main",
-        "description": "main",
-        "peekOfCode": "def get_db():\n    db = SessionLocal()\n    try:\n        yield db\n    finally:\n        db.close()\ndb_dependency = Annotated[Session, Depends(get_db)]\n@app.get(\"/\")\nasync def read_all(db: db_dependency):\n    return db.query(Todos).all()",
-        "detail": "main",
-        "documentation": {}
-    },
-    {
         "label": "app",
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "app = FastAPI()\nmodels.Base.metadata.create_all(bind=engine)\ndef get_db():\n    db = SessionLocal()\n    try:\n        yield db\n    finally:\n        db.close()\ndb_dependency = Annotated[Session, Depends(get_db)]\n@app.get(\"/\")",
-        "detail": "main",
-        "documentation": {}
-    },
-    {
-        "label": "db_dependency",
-        "kind": 5,
-        "importPath": "main",
-        "description": "main",
-        "peekOfCode": "db_dependency = Annotated[Session, Depends(get_db)]\n@app.get(\"/\")\nasync def read_all(db: db_dependency):\n    return db.query(Todos).all()",
+        "peekOfCode": "app = FastAPI()\nmodels.Base.metadata.create_all(bind=engine)\napp.include_router(auth.router)\napp.include_router(todos.router)",
         "detail": "main",
         "documentation": {}
     },
@@ -196,7 +304,7 @@
         "kind": 6,
         "importPath": "models",
         "description": "models",
-        "peekOfCode": "class Todos(Base):\n    __tablename__ = \"todos\"\n    id = Column(Integer, primary_key=True, index=True)\n    title = Column(String)\n    description = Column(String)\n    priority = Column(Integer)\n    Complete = Column(Boolean, default=False)",
+        "peekOfCode": "class Todos(Base):\n    __tablename__ = \"todos\"\n    id = Column(Integer, primary_key=True, index=True)\n    title = Column(String)\n    description = Column(String)\n    priority = Column(Integer)\n    complete = Column(Boolean, default=False)",
         "detail": "models",
         "documentation": {}
     }
