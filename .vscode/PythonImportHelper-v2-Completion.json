@@ -623,7 +623,7 @@
         "kind": 2,
         "importPath": "alembic.versions.bbac48381df6_create_phone_number_for_user_column",
         "description": "alembic.versions.bbac48381df6_create_phone_number_for_user_column",
-        "peekOfCode": "def upgrade() -> None:\n    op.add_column(\"users\", sa.Column(\"phone_number\", sa.String(), nullable=True))\ndef downgrade() -> None:\n    pass",
+        "peekOfCode": "def upgrade() -> None:\n    op.add_column(\"users\", sa.Column(\"phone_number\", sa.String(), nullable=True))\ndef downgrade() -> None:\n    op.drop_column(\"users\", \"phone_number\")",
         "detail": "alembic.versions.bbac48381df6_create_phone_number_for_user_column",
         "documentation": {}
     },
@@ -632,7 +632,7 @@
         "kind": 2,
         "importPath": "alembic.versions.bbac48381df6_create_phone_number_for_user_column",
         "description": "alembic.versions.bbac48381df6_create_phone_number_for_user_column",
-        "peekOfCode": "def downgrade() -> None:\n    pass",
+        "peekOfCode": "def downgrade() -> None:\n    op.drop_column(\"users\", \"phone_number\")",
         "detail": "alembic.versions.bbac48381df6_create_phone_number_for_user_column",
         "documentation": {}
     },
@@ -713,7 +713,7 @@
         "kind": 6,
         "importPath": "routers.auth",
         "description": "routers.auth",
-        "peekOfCode": "class CreateUserRequest(BaseModel):\n    username: str\n    email: str\n    first_name: str\n    last_name: str\n    password: str\n    role: str\nclass Token(BaseModel):\n    access_token: str\n    token_type: str",
+        "peekOfCode": "class CreateUserRequest(BaseModel):\n    username: str\n    email: str\n    first_name: str\n    last_name: str\n    password: str\n    role: str\n    phone_number: str\nclass Token(BaseModel):\n    access_token: str",
         "detail": "routers.auth",
         "documentation": {}
     },
@@ -785,7 +785,7 @@
         "kind": 5,
         "importPath": "routers.auth",
         "description": "routers.auth",
-        "peekOfCode": "bcrypt_context = CryptContext(schemes=[\"bcrypt\"], deprecated=\"auto\")\noauth2_bearer = OAuth2PasswordBearer(tokenUrl=\"auth/token\")\nclass CreateUserRequest(BaseModel):\n    username: str\n    email: str\n    first_name: str\n    last_name: str\n    password: str\n    role: str\nclass Token(BaseModel):",
+        "peekOfCode": "bcrypt_context = CryptContext(schemes=[\"bcrypt\"], deprecated=\"auto\")\noauth2_bearer = OAuth2PasswordBearer(tokenUrl=\"auth/token\")\nclass CreateUserRequest(BaseModel):\n    username: str\n    email: str\n    first_name: str\n    last_name: str\n    password: str\n    role: str\n    phone_number: str",
         "detail": "routers.auth",
         "documentation": {}
     },
@@ -794,7 +794,7 @@
         "kind": 5,
         "importPath": "routers.auth",
         "description": "routers.auth",
-        "peekOfCode": "oauth2_bearer = OAuth2PasswordBearer(tokenUrl=\"auth/token\")\nclass CreateUserRequest(BaseModel):\n    username: str\n    email: str\n    first_name: str\n    last_name: str\n    password: str\n    role: str\nclass Token(BaseModel):\n    access_token: str",
+        "peekOfCode": "oauth2_bearer = OAuth2PasswordBearer(tokenUrl=\"auth/token\")\nclass CreateUserRequest(BaseModel):\n    username: str\n    email: str\n    first_name: str\n    last_name: str\n    password: str\n    role: str\n    phone_number: str\nclass Token(BaseModel):",
         "detail": "routers.auth",
         "documentation": {}
     },
