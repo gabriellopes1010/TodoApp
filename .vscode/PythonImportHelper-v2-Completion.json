@@ -219,14 +219,6 @@
         "documentation": {}
     },
     {
-        "label": "Todos",
-        "importPath": "models",
-        "description": "models",
-        "isExtraImport": true,
-        "detail": "models",
-        "documentation": {}
-    },
-    {
         "label": "Users",
         "importPath": "models",
         "description": "models",
@@ -451,6 +443,14 @@
         "documentation": {}
     },
     {
+        "label": "status",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
         "label": "FastAPI",
         "importPath": "fastapi",
         "description": "fastapi",
@@ -608,6 +608,23 @@
         "description": "jose",
         "isExtraImport": true,
         "detail": "jose",
+        "documentation": {}
+    },
+    {
+        "label": "pytest",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pytest",
+        "description": "pytest",
+        "detail": "pytest",
+        "documentation": {}
+    },
+    {
+        "label": "TestClient",
+        "importPath": "fastapi.testclient",
+        "description": "fastapi.testclient",
+        "isExtraImport": true,
+        "detail": "fastapi.testclient",
         "documentation": {}
     },
     {
@@ -907,6 +924,105 @@
         "documentation": {}
     },
     {
+        "label": "Student",
+        "kind": 6,
+        "importPath": "test.test_example",
+        "description": "test.test_example",
+        "peekOfCode": "class Student:\n    def __init__(self, first_name: str, last_name: str, major: str, years: int):\n        self.first_name = first_name\n        self.last_name = last_name\n        self.major = major\n        self.years = years\n@pytest.fixture\ndef default_employee():\n    return Student(\"John\", \"Doe\", \"Computer Science\", 3)\ndef test_person_initialization(default_employee):",
+        "detail": "test.test_example",
+        "documentation": {}
+    },
+    {
+        "label": "test_equal_or_not_equal",
+        "kind": 2,
+        "importPath": "test.test_example",
+        "description": "test.test_example",
+        "peekOfCode": "def test_equal_or_not_equal():\n    assert 3 == 3\n    assert 3 != 1\ndef test_is_instance():\n    assert isinstance(\"this is a string\", str)\n    assert not isinstance(\"10\", int)\ndef test_boolean():\n    validated = True\n    assert validated is True\n    assert (\"hello\" == \"world\") is False",
+        "detail": "test.test_example",
+        "documentation": {}
+    },
+    {
+        "label": "test_is_instance",
+        "kind": 2,
+        "importPath": "test.test_example",
+        "description": "test.test_example",
+        "peekOfCode": "def test_is_instance():\n    assert isinstance(\"this is a string\", str)\n    assert not isinstance(\"10\", int)\ndef test_boolean():\n    validated = True\n    assert validated is True\n    assert (\"hello\" == \"world\") is False\ndef test_type():\n    assert type(\"hello\" is str)\n    assert type(\"hello\" is not int)",
+        "detail": "test.test_example",
+        "documentation": {}
+    },
+    {
+        "label": "test_boolean",
+        "kind": 2,
+        "importPath": "test.test_example",
+        "description": "test.test_example",
+        "peekOfCode": "def test_boolean():\n    validated = True\n    assert validated is True\n    assert (\"hello\" == \"world\") is False\ndef test_type():\n    assert type(\"hello\" is str)\n    assert type(\"hello\" is not int)\ndef test_greater_and_less_than():\n    assert 7 > 3\n    assert 4 < 10",
+        "detail": "test.test_example",
+        "documentation": {}
+    },
+    {
+        "label": "test_type",
+        "kind": 2,
+        "importPath": "test.test_example",
+        "description": "test.test_example",
+        "peekOfCode": "def test_type():\n    assert type(\"hello\" is str)\n    assert type(\"hello\" is not int)\ndef test_greater_and_less_than():\n    assert 7 > 3\n    assert 4 < 10\ndef test_list():\n    num_list = [1, 2, 3, 4, 5]\n    any_list = [False, False]\n    assert 1 in num_list",
+        "detail": "test.test_example",
+        "documentation": {}
+    },
+    {
+        "label": "test_greater_and_less_than",
+        "kind": 2,
+        "importPath": "test.test_example",
+        "description": "test.test_example",
+        "peekOfCode": "def test_greater_and_less_than():\n    assert 7 > 3\n    assert 4 < 10\ndef test_list():\n    num_list = [1, 2, 3, 4, 5]\n    any_list = [False, False]\n    assert 1 in num_list\n    assert 7 not in num_list\n    assert all(num_list)\n    assert not any(any_list)",
+        "detail": "test.test_example",
+        "documentation": {}
+    },
+    {
+        "label": "test_list",
+        "kind": 2,
+        "importPath": "test.test_example",
+        "description": "test.test_example",
+        "peekOfCode": "def test_list():\n    num_list = [1, 2, 3, 4, 5]\n    any_list = [False, False]\n    assert 1 in num_list\n    assert 7 not in num_list\n    assert all(num_list)\n    assert not any(any_list)\nclass Student:\n    def __init__(self, first_name: str, last_name: str, major: str, years: int):\n        self.first_name = first_name",
+        "detail": "test.test_example",
+        "documentation": {}
+    },
+    {
+        "label": "default_employee",
+        "kind": 2,
+        "importPath": "test.test_example",
+        "description": "test.test_example",
+        "peekOfCode": "def default_employee():\n    return Student(\"John\", \"Doe\", \"Computer Science\", 3)\ndef test_person_initialization(default_employee):\n    assert default_employee.first_name == \"John\", \"First name should be John\"\n    assert default_employee.last_name == \"Doe\", \"Last name should be Doe\"\n    assert default_employee.major == \"Computer Science\"\n    assert default_employee.years == 3",
+        "detail": "test.test_example",
+        "documentation": {}
+    },
+    {
+        "label": "test_person_initialization",
+        "kind": 2,
+        "importPath": "test.test_example",
+        "description": "test.test_example",
+        "peekOfCode": "def test_person_initialization(default_employee):\n    assert default_employee.first_name == \"John\", \"First name should be John\"\n    assert default_employee.last_name == \"Doe\", \"Last name should be Doe\"\n    assert default_employee.major == \"Computer Science\"\n    assert default_employee.years == 3",
+        "detail": "test.test_example",
+        "documentation": {}
+    },
+    {
+        "label": "test_return_health_check",
+        "kind": 2,
+        "importPath": "test.test_main",
+        "description": "test.test_main",
+        "peekOfCode": "def test_return_health_check():\n    response = client.get(\"/healthy\")\n    assert response.status_code == status.HTTP_200_OK\n    assert response.json() == {\"status\": \"Healthy\"}",
+        "detail": "test.test_main",
+        "documentation": {}
+    },
+    {
+        "label": "client",
+        "kind": 5,
+        "importPath": "test.test_main",
+        "description": "test.test_main",
+        "peekOfCode": "client = TestClient(app)\ndef test_return_health_check():\n    response = client.get(\"/healthy\")\n    assert response.status_code == status.HTTP_200_OK\n    assert response.json() == {\"status\": \"Healthy\"}",
+        "detail": "test.test_main",
+        "documentation": {}
+    },
+    {
         "label": "SQLALCHEMY_DATABASE_URL",
         "kind": 5,
         "importPath": "database",
@@ -943,11 +1059,20 @@
         "documentation": {}
     },
     {
+        "label": "healt_check",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def healt_check():\n    return {\"status\": \"Healthy\"}\napp.include_router(auth.router)\napp.include_router(todos.router)\napp.include_router(admin.router)\napp.include_router(users.router)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
         "label": "app",
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "app = FastAPI()\nmodels.Base.metadata.create_all(bind=engine)\napp.include_router(auth.router)\napp.include_router(todos.router)\napp.include_router(admin.router)\napp.include_router(users.router)",
+        "peekOfCode": "app = FastAPI()\nmodels.Base.metadata.create_all(bind=engine)\n@app.get(\"/healthy\")\ndef healt_check():\n    return {\"status\": \"Healthy\"}\napp.include_router(auth.router)\napp.include_router(todos.router)\napp.include_router(admin.router)\napp.include_router(users.router)",
         "detail": "main",
         "documentation": {}
     },
