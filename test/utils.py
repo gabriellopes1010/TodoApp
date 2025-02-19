@@ -1,11 +1,11 @@
-from fastapi.testclient import TestClient
 from sqlalchemy import create_engine, text
 from sqlalchemy.orm import sessionmaker
-import pytest
-
-from ..models import Todos
 from ..database import Base
 from ..main import app
+from fastapi.testclient import TestClient
+import pytest
+from ..models import Todos, Users
+from ..routers.auth import bcrypt_context
 
 SQLALCHEMY_DATABASE_URL = (
     "postgresql://gabriellopes1010:teste1234@localhost/TodoApplicationDatabaseTest"
@@ -28,14 +28,36 @@ def override_get_db():
 
 
 def override_get_current_user():
-    return {"username": "gabriellopes1010", "id": 1, "user_role": "admin"}
+    return {"username": "gabrielsiqueira", "id": 1, "user_role": "admin"}
 
 
 client = TestClient(app)
 
 
 @pytest.fixture
-def tests_todo():
+def test_user():
+    user = Users(
+        username="gabrielsiqueira",
+        email="gabrielsiqueira@email.com",
+        first_name="Gabriel",
+        last_name="Siqueira",
+        hashed_password=bcrypt_context.hash("testpassword"),
+        role="admin",
+        phone_number="(111)-111-1111",
+    )
+
+    db = TestingSessionLocal()
+    db.add(user)
+    db.commit()
+    yield user
+    with engine.connect() as con:
+        con.execute(text("DELETE FROM users"))
+        con.execute(text("SELECT setval('users_id_seq', 1, false)"))
+        con.commit()
+
+
+@pytest.fixture
+def test_todo():
     todo = Todos(
         description="Need to learn everyday",
         complete=False,

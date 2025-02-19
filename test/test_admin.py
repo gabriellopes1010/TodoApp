@@ -7,7 +7,7 @@ app.dependency_overrides[get_db] = override_get_db
 app.dependency_overrides[get_current_user] = override_get_current_user
 
 
-def test_admin_real_all_authenticated(tests_todo):
+def test_admin_real_all_authenticated(test_todo):
     response = client.get("/admin/todo")
     assert response.status_code == status.HTTP_200_OK
     assert response.json() == [
@@ -22,7 +22,7 @@ def test_admin_real_all_authenticated(tests_todo):
     ]
 
 
-def test_admin_delete_todo(tests_todo):
+def test_admin_delete_todo(test_todo):
     response = client.delete("/admin/todo/1")
     assert response.status_code == 204
 

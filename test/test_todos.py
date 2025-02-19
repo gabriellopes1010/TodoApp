@@ -8,7 +8,7 @@ app.dependency_overrides[get_db] = override_get_db
 app.dependency_overrides[get_current_user] = override_get_current_user
 
 
-def test_read_all_authenticated(tests_todo):
+def test_read_all_authenticated(test_todo):
     response = client.get("/")
     assert response.status_code == status.HTTP_200_OK
     assert response.json() == [
@@ -23,7 +23,7 @@ def test_read_all_authenticated(tests_todo):
     ]
 
 
-def test_read_all_one_authenticated(tests_todo):
+def test_read_all_one_authenticated(test_todo):
     response = client.get("/todo/1")
     assert response.status_code == status.HTTP_200_OK
     assert response.json() == {
@@ -42,7 +42,7 @@ def test_read_one_authenticated_not_found():
     assert response.json() == {"detail": "Todo not found."}
 
 
-def test_create_todo(tests_todo):
+def test_create_todo(test_todo):
     request_data = {
         "title": "New todo!",
         "description": "New todo description",
@@ -61,7 +61,7 @@ def test_create_todo(tests_todo):
     assert model.complete == request_data.get("complete")
 
 
-def test_update_todo(tests_todo):
+def test_update_todo(test_todo):
     request_data = {
         "title": "Change the title of the todo already saved!",
         "description": "Need to learn everyday",
@@ -77,7 +77,7 @@ def test_update_todo(tests_todo):
     assert model.title == "Change the title of the todo already saved!"
 
 
-def test_update_todo(tests_todo):
+def test_update_todo(test_todo):
     request_data = {
         "title": "Change the title of the todo already saved!",
         "description": "Need to learn everyday",
@@ -90,7 +90,7 @@ def test_update_todo(tests_todo):
     assert response.json() == {"detail": "Todo not found."}
 
 
-def test_delete_todo(tests_todo):
+def test_delete_todo(test_todo):
     response = client.delete("/todo/1")
     assert response.status_code == 204
     db = TestingSessionLocal()
