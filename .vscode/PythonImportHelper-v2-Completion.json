@@ -628,6 +628,14 @@
         "documentation": {}
     },
     {
+        "label": "StaticFiles",
+        "importPath": "fastapi.staticfiles",
+        "description": "fastapi.staticfiles",
+        "isExtraImport": true,
+        "detail": "fastapi.staticfiles",
+        "documentation": {}
+    },
+    {
         "label": "upgrade",
         "kind": 2,
         "importPath": "alembic.versions.bbac48381df6_create_phone_number_for_user_column",
@@ -1361,7 +1369,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "app = FastAPI()\nBase.metadata.create_all(bind=engine)\ntemplates = Jinja2Templates(directory=\"TodoApp/templates\")\n@app.get(\"/\")\ndef test(request: Request):\n    return templates.TemplateResponse(\"home.html\", {\"request\": request})\n@app.get(\"/healthy\")\ndef health_check():\n    return {\"status\": \"Healthy\"}\napp.include_router(auth.router)",
+        "peekOfCode": "app = FastAPI()\nBase.metadata.create_all(bind=engine)\ntemplates = Jinja2Templates(directory=\"TodoApp/templates\")\napp.mount(\"/static\", StaticFiles(directory=\"TodoApp/static\"), name=\"static\")\n@app.get(\"/\")\ndef test(request: Request):\n    return templates.TemplateResponse(\"home.html\", {\"request\": request})\n@app.get(\"/healthy\")\ndef health_check():\n    return {\"status\": \"Healthy\"}",
         "detail": "main",
         "documentation": {}
     },
@@ -1370,7 +1378,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "templates = Jinja2Templates(directory=\"TodoApp/templates\")\n@app.get(\"/\")\ndef test(request: Request):\n    return templates.TemplateResponse(\"home.html\", {\"request\": request})\n@app.get(\"/healthy\")\ndef health_check():\n    return {\"status\": \"Healthy\"}\napp.include_router(auth.router)\napp.include_router(todos.router)\napp.include_router(admin.router)",
+        "peekOfCode": "templates = Jinja2Templates(directory=\"TodoApp/templates\")\napp.mount(\"/static\", StaticFiles(directory=\"TodoApp/static\"), name=\"static\")\n@app.get(\"/\")\ndef test(request: Request):\n    return templates.TemplateResponse(\"home.html\", {\"request\": request})\n@app.get(\"/healthy\")\ndef health_check():\n    return {\"status\": \"Healthy\"}\napp.include_router(auth.router)\napp.include_router(todos.router)",
         "detail": "main",
         "documentation": {}
     },
