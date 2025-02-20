@@ -9,38 +9,6 @@
         "documentation": {}
     },
     {
-        "label": "auth",
-        "importPath": "routers",
-        "description": "routers",
-        "isExtraImport": true,
-        "detail": "routers",
-        "documentation": {}
-    },
-    {
-        "label": "todos",
-        "importPath": "routers",
-        "description": "routers",
-        "isExtraImport": true,
-        "detail": "routers",
-        "documentation": {}
-    },
-    {
-        "label": "admin",
-        "importPath": "routers",
-        "description": "routers",
-        "isExtraImport": true,
-        "detail": "routers",
-        "documentation": {}
-    },
-    {
-        "label": "users",
-        "importPath": "routers",
-        "description": "routers",
-        "isExtraImport": true,
-        "detail": "routers",
-        "documentation": {}
-    },
-    {
         "label": "Sequence",
         "importPath": "typing",
         "description": "typing",
@@ -138,6 +106,22 @@
         "documentation": {}
     },
     {
+        "label": "text",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "create_engine",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
         "label": "Column",
         "importPath": "sqlalchemy",
         "description": "sqlalchemy",
@@ -195,38 +179,6 @@
         "documentation": {}
     },
     {
-        "label": "Todos",
-        "importPath": "models",
-        "description": "models",
-        "isExtraImport": true,
-        "detail": "models",
-        "documentation": {}
-    },
-    {
-        "label": "Users",
-        "importPath": "models",
-        "description": "models",
-        "isExtraImport": true,
-        "detail": "models",
-        "documentation": {}
-    },
-    {
-        "label": "Todos",
-        "importPath": "models",
-        "description": "models",
-        "isExtraImport": true,
-        "detail": "models",
-        "documentation": {}
-    },
-    {
-        "label": "Users",
-        "importPath": "models",
-        "description": "models",
-        "isExtraImport": true,
-        "detail": "models",
-        "documentation": {}
-    },
-    {
         "label": "BaseModel",
         "importPath": "pydantic",
         "description": "pydantic",
@@ -308,6 +260,14 @@
     },
     {
         "label": "Session",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "sessionmaker",
         "importPath": "sqlalchemy.orm",
         "description": "sqlalchemy.orm",
         "isExtraImport": true,
@@ -451,7 +411,55 @@
         "documentation": {}
     },
     {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
         "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Request",
         "importPath": "fastapi",
         "description": "fastapi",
         "isExtraImport": true,
@@ -491,54 +499,6 @@
         "documentation": {}
     },
     {
-        "label": "SessionLocal",
-        "importPath": "database",
-        "description": "database",
-        "isExtraImport": true,
-        "detail": "database",
-        "documentation": {}
-    },
-    {
-        "label": "SessionLocal",
-        "importPath": "database",
-        "description": "database",
-        "isExtraImport": true,
-        "detail": "database",
-        "documentation": {}
-    },
-    {
-        "label": "SessionLocal",
-        "importPath": "database",
-        "description": "database",
-        "isExtraImport": true,
-        "detail": "database",
-        "documentation": {}
-    },
-    {
-        "label": "SessionLocal",
-        "importPath": "database",
-        "description": "database",
-        "isExtraImport": true,
-        "detail": "database",
-        "documentation": {}
-    },
-    {
-        "label": "engine",
-        "importPath": "database",
-        "description": "database",
-        "isExtraImport": true,
-        "detail": "database",
-        "documentation": {}
-    },
-    {
-        "label": "Base",
-        "importPath": "database",
-        "description": "database",
-        "isExtraImport": true,
-        "detail": "database",
-        "documentation": {}
-    },
-    {
         "label": "datetime",
         "importPath": "datetime",
         "description": "datetime",
@@ -556,6 +516,14 @@
     },
     {
         "label": "timezone",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
         "importPath": "datetime",
         "description": "datetime",
         "isExtraImport": true,
@@ -611,6 +579,14 @@
         "documentation": {}
     },
     {
+        "label": "jwt",
+        "importPath": "jose",
+        "description": "jose",
+        "isExtraImport": true,
+        "detail": "jose",
+        "documentation": {}
+    },
+    {
         "label": "pytest",
         "kind": 6,
         "isExtraImport": true,
@@ -628,11 +604,27 @@
         "documentation": {}
     },
     {
+        "label": "TestClient",
+        "importPath": "fastapi.testclient",
+        "description": "fastapi.testclient",
+        "isExtraImport": true,
+        "detail": "fastapi.testclient",
+        "documentation": {}
+    },
+    {
         "label": "declarative_base",
         "importPath": "sqlalchemy.ext.declarative",
         "description": "sqlalchemy.ext.declarative",
         "isExtraImport": true,
         "detail": "sqlalchemy.ext.declarative",
+        "documentation": {}
+    },
+    {
+        "label": "Jinja2Templates",
+        "importPath": "fastapi.templating",
+        "description": "fastapi.templating",
+        "isExtraImport": true,
+        "detail": "fastapi.templating",
         "documentation": {}
     },
     {
@@ -847,7 +839,7 @@
         "kind": 5,
         "importPath": "routers.todos",
         "description": "routers.todos",
-        "peekOfCode": "router = APIRouter()\ndef get_db():\n    db = SessionLocal()\n    try:\n        yield db\n    finally:\n        db.close()\ndb_dependency = Annotated[Session, Depends(get_db)]\nuser_dependency = Annotated[dict, Depends(get_current_user)]\nclass TodoRequest(BaseModel):",
+        "peekOfCode": "router = APIRouter(prefix=\"/todos\", tags=[\"todos\"])\ndef get_db():\n    db = SessionLocal()\n    try:\n        yield db\n    finally:\n        db.close()\ndb_dependency = Annotated[Session, Depends(get_db)]\nuser_dependency = Annotated[dict, Depends(get_current_user)]\nclass TodoRequest(BaseModel):",
         "detail": "routers.todos",
         "documentation": {}
     },
@@ -921,6 +913,78 @@
         "description": "routers.users",
         "peekOfCode": "bcrypt_context = CryptContext(schemes=[\"bcrypt\"], deprecated=\"auto\")\nclass UserVerification(BaseModel):\n    password: str\n    new_password: str = Field(min_length=6)\n@router.get(\"/\", status_code=status.HTTP_200_OK)\nasync def get_user(user: user_dependency, db: db_dependency):\n    if user is None:\n        raise HTTPException(status_code=401, detail=\"Authentication Failed\")\n    return db.query(Users).filter(Users.id == user.get(\"id\")).first()\n@router.put(\"/password\", status_code=status.HTTP_204_NO_CONTENT)",
         "detail": "routers.users",
+        "documentation": {}
+    },
+    {
+        "label": "test_admin_real_all_authenticated",
+        "kind": 2,
+        "importPath": "test.test_admin",
+        "description": "test.test_admin",
+        "peekOfCode": "def test_admin_real_all_authenticated(test_todo):\n    response = client.get(\"/admin/todo\")\n    assert response.status_code == status.HTTP_200_OK\n    assert response.json() == [\n        {\n            \"complete\": False,\n            \"title\": \"Learn to code!\",\n            \"description\": \"Need to learn everyday\",\n            \"id\": 1,\n            \"priority\": 5,",
+        "detail": "test.test_admin",
+        "documentation": {}
+    },
+    {
+        "label": "test_admin_delete_todo",
+        "kind": 2,
+        "importPath": "test.test_admin",
+        "description": "test.test_admin",
+        "peekOfCode": "def test_admin_delete_todo(test_todo):\n    response = client.delete(\"/admin/todo/1\")\n    assert response.status_code == 204\n    db = TestingSessionLocal()\n    model = db.query(Todos).filter(Todos.id == 1).first()\n    assert model is None\ndef test_delete_admin_not_found():\n    response = client.delete(\"/admin/todo/999\")\n    assert response.status_code == 404\n    assert response.json() == {\"detail\": \"Todo not found\"}",
+        "detail": "test.test_admin",
+        "documentation": {}
+    },
+    {
+        "label": "test_delete_admin_not_found",
+        "kind": 2,
+        "importPath": "test.test_admin",
+        "description": "test.test_admin",
+        "peekOfCode": "def test_delete_admin_not_found():\n    response = client.delete(\"/admin/todo/999\")\n    assert response.status_code == 404\n    assert response.json() == {\"detail\": \"Todo not found\"}",
+        "detail": "test.test_admin",
+        "documentation": {}
+    },
+    {
+        "label": "app.dependency_overrides[get_db]",
+        "kind": 5,
+        "importPath": "test.test_admin",
+        "description": "test.test_admin",
+        "peekOfCode": "app.dependency_overrides[get_db] = override_get_db\napp.dependency_overrides[get_current_user] = override_get_current_user\ndef test_admin_real_all_authenticated(test_todo):\n    response = client.get(\"/admin/todo\")\n    assert response.status_code == status.HTTP_200_OK\n    assert response.json() == [\n        {\n            \"complete\": False,\n            \"title\": \"Learn to code!\",\n            \"description\": \"Need to learn everyday\",",
+        "detail": "test.test_admin",
+        "documentation": {}
+    },
+    {
+        "label": "app.dependency_overrides[get_current_user]",
+        "kind": 5,
+        "importPath": "test.test_admin",
+        "description": "test.test_admin",
+        "peekOfCode": "app.dependency_overrides[get_current_user] = override_get_current_user\ndef test_admin_real_all_authenticated(test_todo):\n    response = client.get(\"/admin/todo\")\n    assert response.status_code == status.HTTP_200_OK\n    assert response.json() == [\n        {\n            \"complete\": False,\n            \"title\": \"Learn to code!\",\n            \"description\": \"Need to learn everyday\",\n            \"id\": 1,",
+        "detail": "test.test_admin",
+        "documentation": {}
+    },
+    {
+        "label": "test_authenticate_user",
+        "kind": 2,
+        "importPath": "test.test_auth",
+        "description": "test.test_auth",
+        "peekOfCode": "def test_authenticate_user(test_user):\n    db = TestingSessionLocal()\n    authenticated_user = authenticate_user(test_user.username, \"testpassword\", db)\n    assert authenticated_user is not None\n    assert authenticated_user.username == test_user.username\n    non_existing_user = authenticate_user(\"WrongUserName\", \"testpassword\", db)\n    assert non_existing_user is False\n    wrong_password_user = authenticate_user(test_user.username, \"wrongpassword\", db)\n    assert wrong_password_user is False\ndef test_create_access_token():",
+        "detail": "test.test_auth",
+        "documentation": {}
+    },
+    {
+        "label": "test_create_access_token",
+        "kind": 2,
+        "importPath": "test.test_auth",
+        "description": "test.test_auth",
+        "peekOfCode": "def test_create_access_token():\n    username = \"testuser\"\n    user_id = 1\n    role = \"user\"\n    expires_delta = timedelta(days=1)\n    token = create_access_token(username, user_id, role, expires_delta)\n    decoded_token = jwt.decode(\n        token, SECRETE_KEY, algorithms=[ALGORITHM], options={\"verify_signature\": False}\n    )\n    assert decoded_token[\"sub\"] == username",
+        "detail": "test.test_auth",
+        "documentation": {}
+    },
+    {
+        "label": "app.dependency_overrides[get_db]",
+        "kind": 5,
+        "importPath": "test.test_auth",
+        "description": "test.test_auth",
+        "peekOfCode": "app.dependency_overrides[get_db] = override_get_db\ndef test_authenticate_user(test_user):\n    db = TestingSessionLocal()\n    authenticated_user = authenticate_user(test_user.username, \"testpassword\", db)\n    assert authenticated_user is not None\n    assert authenticated_user.username == test_user.username\n    non_existing_user = authenticate_user(\"WrongUserName\", \"testpassword\", db)\n    assert non_existing_user is False\n    wrong_password_user = authenticate_user(test_user.username, \"wrongpassword\", db)\n    assert wrong_password_user is False",
+        "detail": "test.test_auth",
         "documentation": {}
     },
     {
@@ -1023,11 +1087,227 @@
         "documentation": {}
     },
     {
+        "label": "test_read_all_authenticated",
+        "kind": 2,
+        "importPath": "test.test_todos",
+        "description": "test.test_todos",
+        "peekOfCode": "def test_read_all_authenticated(test_todo):\n    response = client.get(\"/todos\")\n    assert response.status_code == status.HTTP_200_OK\n    assert response.json() == [\n        {\n            \"description\": \"Need to learn everyday\",\n            \"complete\": False,\n            \"priority\": 5,\n            \"id\": 1,\n            \"title\": \"Learn to code!\",",
+        "detail": "test.test_todos",
+        "documentation": {}
+    },
+    {
+        "label": "test_read_all_one_authenticated",
+        "kind": 2,
+        "importPath": "test.test_todos",
+        "description": "test.test_todos",
+        "peekOfCode": "def test_read_all_one_authenticated(test_todo):\n    response = client.get(\"todos/todo/1\")\n    assert response.status_code == status.HTTP_200_OK\n    assert response.json() == {\n        \"description\": \"Need to learn everyday\",\n        \"complete\": False,\n        \"priority\": 5,\n        \"id\": 1,\n        \"title\": \"Learn to code!\",\n        \"owner_id\": 1,",
+        "detail": "test.test_todos",
+        "documentation": {}
+    },
+    {
+        "label": "test_read_one_authenticated_not_found",
+        "kind": 2,
+        "importPath": "test.test_todos",
+        "description": "test.test_todos",
+        "peekOfCode": "def test_read_one_authenticated_not_found():\n    response = client.get(\"todos/todo/999\")\n    assert response.status_code == 404\n    assert response.json() == {\"detail\": \"Todo not found.\"}\ndef test_create_todo(test_todo):\n    request_data = {\n        \"title\": \"New todo!\",\n        \"description\": \"New todo description\",\n        \"priority\": 5,\n        \"complete\": False,",
+        "detail": "test.test_todos",
+        "documentation": {}
+    },
+    {
+        "label": "test_create_todo",
+        "kind": 2,
+        "importPath": "test.test_todos",
+        "description": "test.test_todos",
+        "peekOfCode": "def test_create_todo(test_todo):\n    request_data = {\n        \"title\": \"New todo!\",\n        \"description\": \"New todo description\",\n        \"priority\": 5,\n        \"complete\": False,\n    }\n    response = client.post(\"todos/todo/\", json=request_data)\n    assert response.status_code == 201\n    db = TestingSessionLocal()",
+        "detail": "test.test_todos",
+        "documentation": {}
+    },
+    {
+        "label": "test_update_todo",
+        "kind": 2,
+        "importPath": "test.test_todos",
+        "description": "test.test_todos",
+        "peekOfCode": "def test_update_todo(test_todo):\n    request_data = {\n        \"title\": \"Change the title of the todo already saved!\",\n        \"description\": \"Need to learn everyday\",\n        \"priority\": 5,\n        \"complete\": False,\n    }\n    response = client.put(\"todos/todo/1\", json=request_data)\n    assert response.status_code == 204\n    db = TestingSessionLocal()",
+        "detail": "test.test_todos",
+        "documentation": {}
+    },
+    {
+        "label": "test_update_todo",
+        "kind": 2,
+        "importPath": "test.test_todos",
+        "description": "test.test_todos",
+        "peekOfCode": "def test_update_todo(test_todo):\n    request_data = {\n        \"title\": \"Change the title of the todo already saved!\",\n        \"description\": \"Need to learn everyday\",\n        \"priority\": 5,\n        \"complete\": False,\n    }\n    response = client.put(\"todos/todo/999\", json=request_data)\n    assert response.status_code == 404\n    assert response.json() == {\"detail\": \"Todo not found.\"}",
+        "detail": "test.test_todos",
+        "documentation": {}
+    },
+    {
+        "label": "test_delete_todo",
+        "kind": 2,
+        "importPath": "test.test_todos",
+        "description": "test.test_todos",
+        "peekOfCode": "def test_delete_todo(test_todo):\n    response = client.delete(\"todos/todo/1\")\n    assert response.status_code == 204\n    db = TestingSessionLocal()\n    model = db.query(Todos).filter(Todos.id == 1).first()\n    assert model is None\ndef test_delete_todo_not_found():\n    response = client.delete(\"todos/todo/999\")\n    assert response.json() == {\"detail\": \"Todo not found\"}",
+        "detail": "test.test_todos",
+        "documentation": {}
+    },
+    {
+        "label": "test_delete_todo_not_found",
+        "kind": 2,
+        "importPath": "test.test_todos",
+        "description": "test.test_todos",
+        "peekOfCode": "def test_delete_todo_not_found():\n    response = client.delete(\"todos/todo/999\")\n    assert response.json() == {\"detail\": \"Todo not found\"}",
+        "detail": "test.test_todos",
+        "documentation": {}
+    },
+    {
+        "label": "app.dependency_overrides[get_db]",
+        "kind": 5,
+        "importPath": "test.test_todos",
+        "description": "test.test_todos",
+        "peekOfCode": "app.dependency_overrides[get_db] = override_get_db\napp.dependency_overrides[get_current_user] = override_get_current_user\ndef test_read_all_authenticated(test_todo):\n    response = client.get(\"/todos\")\n    assert response.status_code == status.HTTP_200_OK\n    assert response.json() == [\n        {\n            \"description\": \"Need to learn everyday\",\n            \"complete\": False,\n            \"priority\": 5,",
+        "detail": "test.test_todos",
+        "documentation": {}
+    },
+    {
+        "label": "app.dependency_overrides[get_current_user]",
+        "kind": 5,
+        "importPath": "test.test_todos",
+        "description": "test.test_todos",
+        "peekOfCode": "app.dependency_overrides[get_current_user] = override_get_current_user\ndef test_read_all_authenticated(test_todo):\n    response = client.get(\"/todos\")\n    assert response.status_code == status.HTTP_200_OK\n    assert response.json() == [\n        {\n            \"description\": \"Need to learn everyday\",\n            \"complete\": False,\n            \"priority\": 5,\n            \"id\": 1,",
+        "detail": "test.test_todos",
+        "documentation": {}
+    },
+    {
+        "label": "test_return_user",
+        "kind": 2,
+        "importPath": "test.test_users",
+        "description": "test.test_users",
+        "peekOfCode": "def test_return_user(test_user):\n    response = client.get(\"/user\")\n    assert response.status_code == status.HTTP_200_OK\n    assert response.json()[\"username\"] == \"gabrielsiqueira\"\n    assert response.json()[\"email\"] == \"gabrielsiqueira@email.com\"\n    assert response.json()[\"first_name\"] == \"Gabriel\"\n    assert response.json()[\"last_name\"] == \"Siqueira\"\n    assert response.json()[\"role\"] == \"admin\"\n    assert response.json()[\"phone_number\"] == \"(111)-111-1111\"\ndef test_change_password_success(test_user):",
+        "detail": "test.test_users",
+        "documentation": {}
+    },
+    {
+        "label": "test_change_password_success",
+        "kind": 2,
+        "importPath": "test.test_users",
+        "description": "test.test_users",
+        "peekOfCode": "def test_change_password_success(test_user):\n    response = client.put(\n        \"/user/password\",\n        json={\"password\": \"testpassword\", \"new_password\": \"newpassword\"},\n    )\n    assert response.status_code == status.HTTP_204_NO_CONTENT\ndef test_change_password_invalid_current_password(test_user):\n    response = client.put(\n        \"/user/password\",\n        json={\"password\": \"wrong_password\", \"new_password\": \"newpassword\"},",
+        "detail": "test.test_users",
+        "documentation": {}
+    },
+    {
+        "label": "test_change_password_invalid_current_password",
+        "kind": 2,
+        "importPath": "test.test_users",
+        "description": "test.test_users",
+        "peekOfCode": "def test_change_password_invalid_current_password(test_user):\n    response = client.put(\n        \"/user/password\",\n        json={\"password\": \"wrong_password\", \"new_password\": \"newpassword\"},\n    )\n    assert response.status_code == status.HTTP_401_UNAUTHORIZED\n    assert response.json() == {\"detail\": \"Error on password change\"}\ndef test_change_phone_number_succsess(test_user):\n    response = client.put(\"/user/phonenumber/222222222222\")\n    assert response.status_code == status.HTTP_204_NO_CONTENT",
+        "detail": "test.test_users",
+        "documentation": {}
+    },
+    {
+        "label": "test_change_phone_number_succsess",
+        "kind": 2,
+        "importPath": "test.test_users",
+        "description": "test.test_users",
+        "peekOfCode": "def test_change_phone_number_succsess(test_user):\n    response = client.put(\"/user/phonenumber/222222222222\")\n    assert response.status_code == status.HTTP_204_NO_CONTENT",
+        "detail": "test.test_users",
+        "documentation": {}
+    },
+    {
+        "label": "app.dependency_overrides[get_db]",
+        "kind": 5,
+        "importPath": "test.test_users",
+        "description": "test.test_users",
+        "peekOfCode": "app.dependency_overrides[get_db] = override_get_db\napp.dependency_overrides[get_current_user] = override_get_current_user\ndef test_return_user(test_user):\n    response = client.get(\"/user\")\n    assert response.status_code == status.HTTP_200_OK\n    assert response.json()[\"username\"] == \"gabrielsiqueira\"\n    assert response.json()[\"email\"] == \"gabrielsiqueira@email.com\"\n    assert response.json()[\"first_name\"] == \"Gabriel\"\n    assert response.json()[\"last_name\"] == \"Siqueira\"\n    assert response.json()[\"role\"] == \"admin\"",
+        "detail": "test.test_users",
+        "documentation": {}
+    },
+    {
+        "label": "app.dependency_overrides[get_current_user]",
+        "kind": 5,
+        "importPath": "test.test_users",
+        "description": "test.test_users",
+        "peekOfCode": "app.dependency_overrides[get_current_user] = override_get_current_user\ndef test_return_user(test_user):\n    response = client.get(\"/user\")\n    assert response.status_code == status.HTTP_200_OK\n    assert response.json()[\"username\"] == \"gabrielsiqueira\"\n    assert response.json()[\"email\"] == \"gabrielsiqueira@email.com\"\n    assert response.json()[\"first_name\"] == \"Gabriel\"\n    assert response.json()[\"last_name\"] == \"Siqueira\"\n    assert response.json()[\"role\"] == \"admin\"\n    assert response.json()[\"phone_number\"] == \"(111)-111-1111\"",
+        "detail": "test.test_users",
+        "documentation": {}
+    },
+    {
+        "label": "override_get_db",
+        "kind": 2,
+        "importPath": "test.utils",
+        "description": "test.utils",
+        "peekOfCode": "def override_get_db():\n    db = TestingSessionLocal()\n    try:\n        yield db\n    finally:\n        db.close()\ndef override_get_current_user():\n    return {\"username\": \"gabrielsiqueira\", \"id\": 1, \"user_role\": \"admin\"}\nclient = TestClient(app)\n@pytest.fixture",
+        "detail": "test.utils",
+        "documentation": {}
+    },
+    {
+        "label": "override_get_current_user",
+        "kind": 2,
+        "importPath": "test.utils",
+        "description": "test.utils",
+        "peekOfCode": "def override_get_current_user():\n    return {\"username\": \"gabrielsiqueira\", \"id\": 1, \"user_role\": \"admin\"}\nclient = TestClient(app)\n@pytest.fixture\ndef test_user():\n    user = Users(\n        username=\"gabrielsiqueira\",\n        email=\"gabrielsiqueira@email.com\",\n        first_name=\"Gabriel\",\n        last_name=\"Siqueira\",",
+        "detail": "test.utils",
+        "documentation": {}
+    },
+    {
+        "label": "test_user",
+        "kind": 2,
+        "importPath": "test.utils",
+        "description": "test.utils",
+        "peekOfCode": "def test_user():\n    user = Users(\n        username=\"gabrielsiqueira\",\n        email=\"gabrielsiqueira@email.com\",\n        first_name=\"Gabriel\",\n        last_name=\"Siqueira\",\n        hashed_password=bcrypt_context.hash(\"testpassword\"),\n        role=\"admin\",\n        phone_number=\"(111)-111-1111\",\n    )",
+        "detail": "test.utils",
+        "documentation": {}
+    },
+    {
+        "label": "test_todo",
+        "kind": 2,
+        "importPath": "test.utils",
+        "description": "test.utils",
+        "peekOfCode": "def test_todo():\n    todo = Todos(\n        description=\"Need to learn everyday\",\n        complete=False,\n        priority=5,\n        title=\"Learn to code!\",\n        owner_id=1,\n    )\n    db = TestingSessionLocal()\n    db.add(todo)",
+        "detail": "test.utils",
+        "documentation": {}
+    },
+    {
+        "label": "SQLALCHEMY_DATABASE_URL",
+        "kind": 5,
+        "importPath": "test.utils",
+        "description": "test.utils",
+        "peekOfCode": "SQLALCHEMY_DATABASE_URL = (\n    \"postgresql://gabriellopes1010:teste1234@localhost/TodoApplicationDatabaseTest\"\n)\nengine = create_engine(SQLALCHEMY_DATABASE_URL)\nTestingSessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)\nBase.metadata.create_all(bind=engine)\ndef override_get_db():\n    db = TestingSessionLocal()\n    try:\n        yield db",
+        "detail": "test.utils",
+        "documentation": {}
+    },
+    {
+        "label": "engine",
+        "kind": 5,
+        "importPath": "test.utils",
+        "description": "test.utils",
+        "peekOfCode": "engine = create_engine(SQLALCHEMY_DATABASE_URL)\nTestingSessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)\nBase.metadata.create_all(bind=engine)\ndef override_get_db():\n    db = TestingSessionLocal()\n    try:\n        yield db\n    finally:\n        db.close()\ndef override_get_current_user():",
+        "detail": "test.utils",
+        "documentation": {}
+    },
+    {
+        "label": "TestingSessionLocal",
+        "kind": 5,
+        "importPath": "test.utils",
+        "description": "test.utils",
+        "peekOfCode": "TestingSessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)\nBase.metadata.create_all(bind=engine)\ndef override_get_db():\n    db = TestingSessionLocal()\n    try:\n        yield db\n    finally:\n        db.close()\ndef override_get_current_user():\n    return {\"username\": \"gabrielsiqueira\", \"id\": 1, \"user_role\": \"admin\"}",
+        "detail": "test.utils",
+        "documentation": {}
+    },
+    {
+        "label": "client",
+        "kind": 5,
+        "importPath": "test.utils",
+        "description": "test.utils",
+        "peekOfCode": "client = TestClient(app)\n@pytest.fixture\ndef test_user():\n    user = Users(\n        username=\"gabrielsiqueira\",\n        email=\"gabrielsiqueira@email.com\",\n        first_name=\"Gabriel\",\n        last_name=\"Siqueira\",\n        hashed_password=bcrypt_context.hash(\"testpassword\"),\n        role=\"admin\",",
+        "detail": "test.utils",
+        "documentation": {}
+    },
+    {
         "label": "SQLALCHEMY_DATABASE_URL",
         "kind": 5,
         "importPath": "database",
         "description": "database",
-        "peekOfCode": "SQLALCHEMY_DATABASE_URL = (\n    \"postgresql://gabriellopes1010:teste1234@localhost/TodoApplicationDatabase\"\n)\nengine = create_engine(SQLALCHEMY_DATABASE_URL)\nSessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)\nBase = declarative_base()",
+        "peekOfCode": "SQLALCHEMY_DATABASE_URL = (\n    \"postgresql://gabriellopes1010:teste1234@localhost/TodoApplicationDatabaseTest\"\n)\nengine = create_engine(SQLALCHEMY_DATABASE_URL)\nSessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)\nBase = declarative_base()",
         "detail": "database",
         "documentation": {}
     },
@@ -1059,11 +1339,20 @@
         "documentation": {}
     },
     {
-        "label": "healt_check",
+        "label": "test",
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def healt_check():\n    return {\"status\": \"Healthy\"}\napp.include_router(auth.router)\napp.include_router(todos.router)\napp.include_router(admin.router)\napp.include_router(users.router)",
+        "peekOfCode": "def test(request: Request):\n    return templates.TemplateResponse(\"home.html\", {\"request\": request})\n@app.get(\"/healthy\")\ndef health_check():\n    return {\"status\": \"Healthy\"}\napp.include_router(auth.router)\napp.include_router(todos.router)\napp.include_router(admin.router)\napp.include_router(users.router)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "health_check",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def health_check():\n    return {\"status\": \"Healthy\"}\napp.include_router(auth.router)\napp.include_router(todos.router)\napp.include_router(admin.router)\napp.include_router(users.router)",
         "detail": "main",
         "documentation": {}
     },
@@ -1072,7 +1361,16 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "app = FastAPI()\nmodels.Base.metadata.create_all(bind=engine)\n@app.get(\"/healthy\")\ndef healt_check():\n    return {\"status\": \"Healthy\"}\napp.include_router(auth.router)\napp.include_router(todos.router)\napp.include_router(admin.router)\napp.include_router(users.router)",
+        "peekOfCode": "app = FastAPI()\nBase.metadata.create_all(bind=engine)\ntemplates = Jinja2Templates(directory=\"TodoApp/templates\")\n@app.get(\"/\")\ndef test(request: Request):\n    return templates.TemplateResponse(\"home.html\", {\"request\": request})\n@app.get(\"/healthy\")\ndef health_check():\n    return {\"status\": \"Healthy\"}\napp.include_router(auth.router)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "templates",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "templates = Jinja2Templates(directory=\"TodoApp/templates\")\n@app.get(\"/\")\ndef test(request: Request):\n    return templates.TemplateResponse(\"home.html\", {\"request\": request})\n@app.get(\"/healthy\")\ndef health_check():\n    return {\"status\": \"Healthy\"}\napp.include_router(auth.router)\napp.include_router(todos.router)\napp.include_router(admin.router)",
         "detail": "main",
         "documentation": {}
     },
@@ -1081,7 +1379,7 @@
         "kind": 6,
         "importPath": "models",
         "description": "models",
-        "peekOfCode": "class Users(Base):\n    __tablename__ = \"users\"\n    id = Column(Integer, primary_key=True, index=True)\n    email = Column(String, unique=True)\n    username = Column(String, unique=True)\n    first_name = Column(String)\n    last_name = Column(String)\n    hashed_password = Column(String)\n    is_active = Column(Boolean, default=True)\n    role = Column(String)",
+        "peekOfCode": "class Users(Base):\n    __tablename__ = \"users\"\n    id = Column(Integer, primary_key=True, index=True)\n    username = Column(String, unique=True)\n    email = Column(String, unique=True)\n    first_name = Column(String)\n    last_name = Column(String)\n    hashed_password = Column(String)\n    is_active = Column(Boolean, default=True)\n    role = Column(String)",
         "detail": "models",
         "documentation": {}
     },
