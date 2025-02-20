@@ -773,7 +773,16 @@
         "kind": 2,
         "importPath": "routers.auth",
         "description": "routers.auth",
-        "peekOfCode": "def render_login_page(request: Request):\n    return templates.TemplateResponse(\"login.html\", {\"request\": request})\n##ENDPOINTS\ndef authenticate_user(username: str, password: str, db):\n    user = db.query(Users).filter(Users.username == username).first()\n    if not user:\n        return False\n    if not bcrypt_context.verify(password, user.hashed_password):\n        return False\n    return user",
+        "peekOfCode": "def render_login_page(request: Request):\n    return templates.TemplateResponse(\"login.html\", {\"request\": request})\n@router.get(\"/register-page\")\ndef render_register_page(request: Request):\n    return templates.TemplateResponse(\"register.html\", {\"request\": request})\n##ENDPOINTS\ndef authenticate_user(username: str, password: str, db):\n    user = db.query(Users).filter(Users.username == username).first()\n    if not user:\n        return False",
+        "detail": "routers.auth",
+        "documentation": {}
+    },
+    {
+        "label": "render_register_page",
+        "kind": 2,
+        "importPath": "routers.auth",
+        "description": "routers.auth",
+        "peekOfCode": "def render_register_page(request: Request):\n    return templates.TemplateResponse(\"register.html\", {\"request\": request})\n##ENDPOINTS\ndef authenticate_user(username: str, password: str, db):\n    user = db.query(Users).filter(Users.username == username).first()\n    if not user:\n        return False\n    if not bcrypt_context.verify(password, user.hashed_password):\n        return False\n    return user",
         "detail": "routers.auth",
         "documentation": {}
     },
@@ -845,7 +854,7 @@
         "kind": 5,
         "importPath": "routers.auth",
         "description": "routers.auth",
-        "peekOfCode": "db_dependency = Annotated[Session, Depends(get_db)]\ntemplates = Jinja2Templates(directory=\"TodoApp/templates\")\n## PAGES ##\n@router.get(\"/login-page\")\ndef render_login_page(request: Request):\n    return templates.TemplateResponse(\"login.html\", {\"request\": request})\n##ENDPOINTS\ndef authenticate_user(username: str, password: str, db):\n    user = db.query(Users).filter(Users.username == username).first()\n    if not user:",
+        "peekOfCode": "db_dependency = Annotated[Session, Depends(get_db)]\ntemplates = Jinja2Templates(directory=\"TodoApp/templates\")\n## PAGES ##\n@router.get(\"/login-page\")\ndef render_login_page(request: Request):\n    return templates.TemplateResponse(\"login.html\", {\"request\": request})\n@router.get(\"/register-page\")\ndef render_register_page(request: Request):\n    return templates.TemplateResponse(\"register.html\", {\"request\": request})\n##ENDPOINTS",
         "detail": "routers.auth",
         "documentation": {}
     },
@@ -854,7 +863,7 @@
         "kind": 5,
         "importPath": "routers.auth",
         "description": "routers.auth",
-        "peekOfCode": "templates = Jinja2Templates(directory=\"TodoApp/templates\")\n## PAGES ##\n@router.get(\"/login-page\")\ndef render_login_page(request: Request):\n    return templates.TemplateResponse(\"login.html\", {\"request\": request})\n##ENDPOINTS\ndef authenticate_user(username: str, password: str, db):\n    user = db.query(Users).filter(Users.username == username).first()\n    if not user:\n        return False",
+        "peekOfCode": "templates = Jinja2Templates(directory=\"TodoApp/templates\")\n## PAGES ##\n@router.get(\"/login-page\")\ndef render_login_page(request: Request):\n    return templates.TemplateResponse(\"login.html\", {\"request\": request})\n@router.get(\"/register-page\")\ndef render_register_page(request: Request):\n    return templates.TemplateResponse(\"register.html\", {\"request\": request})\n##ENDPOINTS\ndef authenticate_user(username: str, password: str, db):",
         "detail": "routers.auth",
         "documentation": {}
     },
