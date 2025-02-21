@@ -1,5 +1,5 @@
 from jose import jwt
-from .utils import *
+from utils import *
 from ..routers.auth import (
     get_db,
     authenticate_user,
