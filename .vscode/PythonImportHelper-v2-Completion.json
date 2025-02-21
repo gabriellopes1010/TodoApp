@@ -9,38 +9,6 @@
         "documentation": {}
     },
     {
-        "label": "auth",
-        "importPath": "routers",
-        "description": "routers",
-        "isExtraImport": true,
-        "detail": "routers",
-        "documentation": {}
-    },
-    {
-        "label": "todos",
-        "importPath": "routers",
-        "description": "routers",
-        "isExtraImport": true,
-        "detail": "routers",
-        "documentation": {}
-    },
-    {
-        "label": "admin",
-        "importPath": "routers",
-        "description": "routers",
-        "isExtraImport": true,
-        "detail": "routers",
-        "documentation": {}
-    },
-    {
-        "label": "users",
-        "importPath": "routers",
-        "description": "routers",
-        "isExtraImport": true,
-        "detail": "routers",
-        "documentation": {}
-    },
-    {
         "label": "Sequence",
         "importPath": "typing",
         "description": "typing",
