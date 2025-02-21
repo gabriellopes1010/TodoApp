@@ -492,6 +492,14 @@
     },
     {
         "label": "status",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "status",
         "importPath": "starlette",
         "description": "starlette",
         "isExtraImport": true,
@@ -627,14 +635,6 @@
         "documentation": {}
     },
     {
-        "label": "Jinja2Templates",
-        "importPath": "fastapi.templating",
-        "description": "fastapi.templating",
-        "isExtraImport": true,
-        "detail": "fastapi.templating",
-        "documentation": {}
-    },
-    {
         "label": "RedirectResponse",
         "importPath": "starlette.responses",
         "description": "starlette.responses",
@@ -681,6 +681,14 @@
         "description": "fastapi.staticfiles",
         "isExtraImport": true,
         "detail": "fastapi.staticfiles",
+        "documentation": {}
+    },
+    {
+        "label": "RedirectResponse",
+        "importPath": "fastapi.responses",
+        "description": "fastapi.responses",
+        "isExtraImport": true,
+        "detail": "fastapi.responses",
         "documentation": {}
     },
     {
@@ -1444,7 +1452,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def test(request: Request):\n    return templates.TemplateResponse(\"home.html\", {\"request\": request})\n@app.get(\"/healthy\")\ndef health_check():\n    return {\"status\": \"Healthy\"}\napp.include_router(auth.router)\napp.include_router(todos.router)\napp.include_router(admin.router)\napp.include_router(users.router)",
+        "peekOfCode": "def test(request: Request):\n    return RedirectResponse(url=\"/todos/todo-page\", status_code=status.HTTP_302_FOUND)\n@app.get(\"/healthy\")\ndef health_check():\n    return {\"status\": \"Healthy\"}\napp.include_router(auth.router)\napp.include_router(todos.router)\napp.include_router(admin.router)\napp.include_router(users.router)",
         "detail": "main",
         "documentation": {}
     },
@@ -1462,16 +1470,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "app = FastAPI()\nBase.metadata.create_all(bind=engine)\ntemplates = Jinja2Templates(directory=\"TodoApp/templates\")\napp.mount(\"/static\", StaticFiles(directory=\"TodoApp/static\"), name=\"static\")\n@app.get(\"/\")\ndef test(request: Request):\n    return templates.TemplateResponse(\"home.html\", {\"request\": request})\n@app.get(\"/healthy\")\ndef health_check():\n    return {\"status\": \"Healthy\"}",
-        "detail": "main",
-        "documentation": {}
-    },
-    {
-        "label": "templates",
-        "kind": 5,
-        "importPath": "main",
-        "description": "main",
-        "peekOfCode": "templates = Jinja2Templates(directory=\"TodoApp/templates\")\napp.mount(\"/static\", StaticFiles(directory=\"TodoApp/static\"), name=\"static\")\n@app.get(\"/\")\ndef test(request: Request):\n    return templates.TemplateResponse(\"home.html\", {\"request\": request})\n@app.get(\"/healthy\")\ndef health_check():\n    return {\"status\": \"Healthy\"}\napp.include_router(auth.router)\napp.include_router(todos.router)",
+        "peekOfCode": "app = FastAPI()\nBase.metadata.create_all(bind=engine)\napp.mount(\"/static\", StaticFiles(directory=\"TodoApp/static\"), name=\"static\")\n@app.get(\"/\")\ndef test(request: Request):\n    return RedirectResponse(url=\"/todos/todo-page\", status_code=status.HTTP_302_FOUND)\n@app.get(\"/healthy\")\ndef health_check():\n    return {\"status\": \"Healthy\"}\napp.include_router(auth.router)",
         "detail": "main",
         "documentation": {}
     },
