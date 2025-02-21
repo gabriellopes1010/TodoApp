@@ -379,6 +379,22 @@
         "documentation": {}
     },
     {
+        "label": "Request",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
         "label": "APIRouter",
         "importPath": "fastapi",
         "description": "fastapi",
@@ -608,6 +624,22 @@
         "description": "fastapi.templating",
         "isExtraImport": true,
         "detail": "fastapi.templating",
+        "documentation": {}
+    },
+    {
+        "label": "Jinja2Templates",
+        "importPath": "fastapi.templating",
+        "description": "fastapi.templating",
+        "isExtraImport": true,
+        "detail": "fastapi.templating",
+        "documentation": {}
+    },
+    {
+        "label": "RedirectResponse",
+        "importPath": "starlette.responses",
+        "description": "starlette.responses",
+        "isExtraImport": true,
+        "detail": "starlette.responses",
         "documentation": {}
     },
     {
@@ -872,7 +904,7 @@
         "kind": 6,
         "importPath": "routers.todos",
         "description": "routers.todos",
-        "peekOfCode": "class TodoRequest(BaseModel):\n    title: str = Field(min_length=3)\n    description: str = Field(min_length=3, max_length=100)\n    priority: int = Field(gt=0, lt=6)\n    complete: bool\n@router.get(\"/\", status_code=status.HTTP_200_OK)\nasync def read_all(user: user_dependency, db: db_dependency):\n    if user is None:\n        raise HTTPException(status_code=401, detail=\"Authentication Failed\")\n    return db.query(Todos).filter(Todos.owner_id == user.get(\"id\")).all()",
+        "peekOfCode": "class TodoRequest(BaseModel):\n    title: str = Field(min_length=3)\n    description: str = Field(min_length=3, max_length=100)\n    priority: int = Field(gt=0, lt=6)\n    complete: bool\ndef redirect_to_login():\n    redirect_response = RedirectResponse(\n        url=\"/auth/login-page\", status_code=status.HTTP_302_FOUND\n    )\n    redirect_response.delete_cookie(key=\"access_token\")",
         "detail": "routers.todos",
         "documentation": {}
     },
@@ -882,6 +914,24 @@
         "importPath": "routers.todos",
         "description": "routers.todos",
         "peekOfCode": "def get_db():\n    db = SessionLocal()\n    try:\n        yield db\n    finally:\n        db.close()\ndb_dependency = Annotated[Session, Depends(get_db)]\nuser_dependency = Annotated[dict, Depends(get_current_user)]\nclass TodoRequest(BaseModel):\n    title: str = Field(min_length=3)",
+        "detail": "routers.todos",
+        "documentation": {}
+    },
+    {
+        "label": "redirect_to_login",
+        "kind": 2,
+        "importPath": "routers.todos",
+        "description": "routers.todos",
+        "peekOfCode": "def redirect_to_login():\n    redirect_response = RedirectResponse(\n        url=\"/auth/login-page\", status_code=status.HTTP_302_FOUND\n    )\n    redirect_response.delete_cookie(key=\"access_token\")\n    return redirect_response\n## Pages ##\n@router.get(\"/todo-page\")\nasync def render_todo_page(request: Request, db: db_dependency):\n    try:",
+        "detail": "routers.todos",
+        "documentation": {}
+    },
+    {
+        "label": "templates",
+        "kind": 5,
+        "importPath": "routers.todos",
+        "description": "routers.todos",
+        "peekOfCode": "templates = Jinja2Templates(directory=\"TodoApp/templates\")\nrouter = APIRouter(prefix=\"/todos\", tags=[\"todos\"])\ndef get_db():\n    db = SessionLocal()\n    try:\n        yield db\n    finally:\n        db.close()\ndb_dependency = Annotated[Session, Depends(get_db)]\nuser_dependency = Annotated[dict, Depends(get_current_user)]",
         "detail": "routers.todos",
         "documentation": {}
     },
@@ -899,7 +949,7 @@
         "kind": 5,
         "importPath": "routers.todos",
         "description": "routers.todos",
-        "peekOfCode": "db_dependency = Annotated[Session, Depends(get_db)]\nuser_dependency = Annotated[dict, Depends(get_current_user)]\nclass TodoRequest(BaseModel):\n    title: str = Field(min_length=3)\n    description: str = Field(min_length=3, max_length=100)\n    priority: int = Field(gt=0, lt=6)\n    complete: bool\n@router.get(\"/\", status_code=status.HTTP_200_OK)\nasync def read_all(user: user_dependency, db: db_dependency):\n    if user is None:",
+        "peekOfCode": "db_dependency = Annotated[Session, Depends(get_db)]\nuser_dependency = Annotated[dict, Depends(get_current_user)]\nclass TodoRequest(BaseModel):\n    title: str = Field(min_length=3)\n    description: str = Field(min_length=3, max_length=100)\n    priority: int = Field(gt=0, lt=6)\n    complete: bool\ndef redirect_to_login():\n    redirect_response = RedirectResponse(\n        url=\"/auth/login-page\", status_code=status.HTTP_302_FOUND",
         "detail": "routers.todos",
         "documentation": {}
     },
@@ -908,7 +958,7 @@
         "kind": 5,
         "importPath": "routers.todos",
         "description": "routers.todos",
-        "peekOfCode": "user_dependency = Annotated[dict, Depends(get_current_user)]\nclass TodoRequest(BaseModel):\n    title: str = Field(min_length=3)\n    description: str = Field(min_length=3, max_length=100)\n    priority: int = Field(gt=0, lt=6)\n    complete: bool\n@router.get(\"/\", status_code=status.HTTP_200_OK)\nasync def read_all(user: user_dependency, db: db_dependency):\n    if user is None:\n        raise HTTPException(status_code=401, detail=\"Authentication Failed\")",
+        "peekOfCode": "user_dependency = Annotated[dict, Depends(get_current_user)]\nclass TodoRequest(BaseModel):\n    title: str = Field(min_length=3)\n    description: str = Field(min_length=3, max_length=100)\n    priority: int = Field(gt=0, lt=6)\n    complete: bool\ndef redirect_to_login():\n    redirect_response = RedirectResponse(\n        url=\"/auth/login-page\", status_code=status.HTTP_302_FOUND\n    )",
         "detail": "routers.todos",
         "documentation": {}
     },
