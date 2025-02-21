@@ -211,14 +211,6 @@
         "documentation": {}
     },
     {
-        "label": "Base",
-        "importPath": "models",
-        "description": "models",
-        "isExtraImport": true,
-        "detail": "models",
-        "documentation": {}
-    },
-    {
         "label": "BaseModel",
         "importPath": "pydantic",
         "description": "pydantic",
@@ -571,30 +563,6 @@
         "documentation": {}
     },
     {
-        "label": "get_current_user",
-        "importPath": "auth",
-        "description": "auth",
-        "isExtraImport": true,
-        "detail": "auth",
-        "documentation": {}
-    },
-    {
-        "label": "get_current_user",
-        "importPath": "auth",
-        "description": "auth",
-        "isExtraImport": true,
-        "detail": "auth",
-        "documentation": {}
-    },
-    {
-        "label": "get_current_user",
-        "importPath": "auth",
-        "description": "auth",
-        "isExtraImport": true,
-        "detail": "auth",
-        "documentation": {}
-    },
-    {
         "label": "datetime",
         "importPath": "datetime",
         "description": "datetime",
@@ -769,14 +737,6 @@
         "description": "sqlalchemy.ext.declarative",
         "isExtraImport": true,
         "detail": "sqlalchemy.ext.declarative",
-        "documentation": {}
-    },
-    {
-        "label": "engine",
-        "importPath": "database",
-        "description": "database",
-        "isExtraImport": true,
-        "detail": "database",
         "documentation": {}
     },
     {
