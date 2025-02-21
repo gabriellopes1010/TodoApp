@@ -1448,7 +1448,7 @@
         "kind": 5,
         "importPath": "src.database",
         "description": "src.database",
-        "peekOfCode": "SQLALCHEMY_DATABASE_URL = \"postgresql://postgres:noXxnurvRPUEgcfUooxlAJaIFhFXYrBk@shinkansen.proxy.rlwy.net:58780/railway\"\nengine = create_engine(SQLALCHEMY_DATABASE_URL)\nSessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)\nBase = declarative_base()",
+        "peekOfCode": "SQLALCHEMY_DATABASE_URL = (\n    \"postgresql://gabriellopes1010:teste1234@localhost:5433/TodoApplicationDatabase\"\n)\nengine = create_engine(SQLALCHEMY_DATABASE_URL)\nSessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)\nBase = declarative_base()",
         "detail": "src.database",
         "documentation": {}
     },
