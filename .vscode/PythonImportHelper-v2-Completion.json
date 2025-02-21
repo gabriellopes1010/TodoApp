@@ -836,7 +836,7 @@
         "kind": 2,
         "importPath": "src.routers.auth",
         "description": "src.routers.auth",
-        "peekOfCode": "def get_db():\n    db = SessionLocal()\n    try:\n        yield db\n    finally:\n        db.close()\ndb_dependency = Annotated[Session, Depends(get_db)]\ntemplates = Jinja2Templates(directory=\"TodoApp/templates\")\n## PAGES ##\n@router.get(\"/login-page\")",
+        "peekOfCode": "def get_db():\n    db = SessionLocal()\n    try:\n        yield db\n    finally:\n        db.close()\ndb_dependency = Annotated[Session, Depends(get_db)]\ntemplates = Jinja2Templates(directory=\"src/templates\")\n## PAGES ##\n@router.get(\"/login-page\")",
         "detail": "src.routers.auth",
         "documentation": {}
     },
@@ -926,7 +926,7 @@
         "kind": 5,
         "importPath": "src.routers.auth",
         "description": "src.routers.auth",
-        "peekOfCode": "db_dependency = Annotated[Session, Depends(get_db)]\ntemplates = Jinja2Templates(directory=\"TodoApp/templates\")\n## PAGES ##\n@router.get(\"/login-page\")\ndef render_login_page(request: Request):\n    return templates.TemplateResponse(\"login.html\", {\"request\": request})\n@router.get(\"/register-page\")\ndef render_register_page(request: Request):\n    return templates.TemplateResponse(\"register.html\", {\"request\": request})\n##ENDPOINTS",
+        "peekOfCode": "db_dependency = Annotated[Session, Depends(get_db)]\ntemplates = Jinja2Templates(directory=\"src/templates\")\n## PAGES ##\n@router.get(\"/login-page\")\ndef render_login_page(request: Request):\n    return templates.TemplateResponse(\"login.html\", {\"request\": request})\n@router.get(\"/register-page\")\ndef render_register_page(request: Request):\n    return templates.TemplateResponse(\"register.html\", {\"request\": request})\n##ENDPOINTS",
         "detail": "src.routers.auth",
         "documentation": {}
     },
@@ -935,7 +935,7 @@
         "kind": 5,
         "importPath": "src.routers.auth",
         "description": "src.routers.auth",
-        "peekOfCode": "templates = Jinja2Templates(directory=\"TodoApp/templates\")\n## PAGES ##\n@router.get(\"/login-page\")\ndef render_login_page(request: Request):\n    return templates.TemplateResponse(\"login.html\", {\"request\": request})\n@router.get(\"/register-page\")\ndef render_register_page(request: Request):\n    return templates.TemplateResponse(\"register.html\", {\"request\": request})\n##ENDPOINTS\ndef authenticate_user(username: str, password: str, db):",
+        "peekOfCode": "templates = Jinja2Templates(directory=\"src/templates\")\n## PAGES ##\n@router.get(\"/login-page\")\ndef render_login_page(request: Request):\n    return templates.TemplateResponse(\"login.html\", {\"request\": request})\n@router.get(\"/register-page\")\ndef render_register_page(request: Request):\n    return templates.TemplateResponse(\"register.html\", {\"request\": request})\n##ENDPOINTS\ndef authenticate_user(username: str, password: str, db):",
         "detail": "src.routers.auth",
         "documentation": {}
     },
@@ -971,7 +971,7 @@
         "kind": 5,
         "importPath": "src.routers.todos",
         "description": "src.routers.todos",
-        "peekOfCode": "templates = Jinja2Templates(directory=\"TodoApp/templates\")\nrouter = APIRouter(prefix=\"/todos\", tags=[\"todos\"])\ndef get_db():\n    db = SessionLocal()\n    try:\n        yield db\n    finally:\n        db.close()\ndb_dependency = Annotated[Session, Depends(get_db)]\nuser_dependency = Annotated[dict, Depends(get_current_user)]",
+        "peekOfCode": "templates = Jinja2Templates(directory=\"src/templates\")\nrouter = APIRouter(prefix=\"/todos\", tags=[\"todos\"])\ndef get_db():\n    db = SessionLocal()\n    try:\n        yield db\n    finally:\n        db.close()\ndb_dependency = Annotated[Session, Depends(get_db)]\nuser_dependency = Annotated[dict, Depends(get_current_user)]",
         "detail": "src.routers.todos",
         "documentation": {}
     },
@@ -1502,7 +1502,7 @@
         "kind": 5,
         "importPath": "src.main",
         "description": "src.main",
-        "peekOfCode": "app = FastAPI()\nBase.metadata.create_all(bind=engine)\napp.mount(\"/static\", StaticFiles(directory=\"TodoApp/static\"), name=\"static\")\n@app.get(\"/\")\ndef test(request: Request):\n    return RedirectResponse(url=\"/todos/todo-page\", status_code=status.HTTP_302_FOUND)\n@app.get(\"/healthy\")\ndef health_check():\n    return {\"status\": \"Healthy\"}\napp.include_router(auth.router)",
+        "peekOfCode": "app = FastAPI()\nBase.metadata.create_all(bind=engine)\napp.mount(\"/static\", StaticFiles(directory=\"src/static\"), name=\"static\")\n@app.get(\"/\")\ndef test(request: Request):\n    return RedirectResponse(url=\"/todos/todo-page\", status_code=status.HTTP_302_FOUND)\n@app.get(\"/healthy\")\ndef health_check():\n    return {\"status\": \"Healthy\"}\napp.include_router(auth.router)",
         "detail": "src.main",
         "documentation": {}
     },
