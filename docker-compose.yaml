@@ -3,7 +3,9 @@ services:
     image: postgres
     restart: always
     environment:
-      POSTGRES_PASSWORD: example
+      POSTGRES_USER: gabriellopes1010
+      POSTGRES_PASSWORD: teste1234
+      POSTGRES_DB: TodoApplicationDatabase
     healthcheck:
       test: ["CMD-SHELL", "pg_isready"]
       interval: 1s
@@ -11,9 +13,9 @@ services:
       retries: 10
     ports:
       - 5433:5432
- # adicionar o user e o database (duas variaveis)
+
   adminer:
     image: adminer
     restart: always
     ports:
-      - 8080:8080 
+      - 8080:8080
