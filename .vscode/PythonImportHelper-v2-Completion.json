@@ -708,6 +708,23 @@
         "documentation": {}
     },
     {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
         "label": "StaticFiles",
         "importPath": "fastapi.staticfiles",
         "description": "fastapi.staticfiles",
@@ -1448,7 +1465,7 @@
         "kind": 5,
         "importPath": "src.database",
         "description": "src.database",
-        "peekOfCode": "SQLALCHEMY_DATABASE_URL = (\n    \"postgresql://gabriellopes1010:teste1234@localhost:5433/TodoApplicationDatabase\"\n)\nengine = create_engine(SQLALCHEMY_DATABASE_URL)\nSessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)\nBase = declarative_base()",
+        "peekOfCode": "SQLALCHEMY_DATABASE_URL = f\"postgresql://{os.getenv('POSTGRES_USER')}:{os.getenv('POSTGRES_PASSWORD')}@{os.getenv('POSTGRES_HOST')}:{os.getenv('POSTGRES_PORT')}/{os.getenv('POSTGRES_DB')}\"\nengine = create_engine(SQLALCHEMY_DATABASE_URL)\nSessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)\nBase = declarative_base()",
         "detail": "src.database",
         "documentation": {}
     },
